@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://ce1xolefnl8mt"]
+
+[ext_resource type="Script" uid="uid://bwoaao5flyo3b" path="res://enemy.gd" id="1_7k104"]
+
+[sub_resource type="Gradient" id="Gradient_7k104"]
+offsets = PackedFloat32Array(0.684211, 0.754386, 0.763158)
+colors = PackedColorArray(0.176419, 0.176419, 0.176419, 1, 0.277528, 0.277528, 0.277528, 1, 0.272655, 0.272655, 0.272655, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4gyqm"]
+gradient = SubResource("Gradient_7k104")
+width = 110
+height = 110
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_7xaro"]
+offsets = PackedFloat32Array(0.710526, 0.798246, 1)
+colors = PackedColorArray(0.798975, 1.8049e-06, 5.77569e-07, 1, 0.392157, 0, 0.00784314, 0.0509804, 0.286275, 0.286275, 0.286275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7k104"]
+gradient = SubResource("Gradient_7xaro")
+width = 100
+height = 100
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xaro"]
+radius = 36.0139
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7k104"]
+bg_color = Color(0, 0, 0, 0.396078)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gyqm"]
+bg_color = Color(0.789201, 0, 0.043511, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+slide_on_ceiling = false
+platform_floor_layers = 0
+script = ExtResource("1_7k104")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_7k104")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7xaro")
+debug_color = Color(0.925082, 4.23551e-05, 0.67759, 0.42)
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -30.0
+offset_top = -57.0
+offset_right = 30.0
+offset_bottom = -45.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7k104")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4gyqm")
+max_value = 5.0
+value = 5.0
+show_percentage = false

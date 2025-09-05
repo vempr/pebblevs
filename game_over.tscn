@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://drugmui5bih5a"]
+
+[sub_resource type="GDScript" id="GDScript_xapjj"]
+script/source = "extends CanvasLayer
+
+#func _on_replay_button_pressed() -> void:
+	#get_tree().paused = false
+	#PlayerVariables.upgradable = PlayerVariables.STARTING_STATS
+	#
+	#hide()
+	#visible = false
+	
+# ui.gd (on CanvasLayer root)
+"
+
+[node name="GameOver" type="CanvasLayer"]
+script = SubResource("GDScript_xapjj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -444.0
+offset_top = -193.0
+offset_right = 1574.0
+offset_bottom = 856.0
+color = Color(0, 0, 0, 0.286275)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 319.0
+offset_top = 161.0
+offset_right = 850.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 90
+text = "game over..."

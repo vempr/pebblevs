@@ -1,0 +1,168 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8gnk3xltpjhn"]
+
+[ext_resource type="Script" uid="uid://caat7etfki266" path="res://hud.gd" id="1_8sq4i"]
+[ext_resource type="Script" uid="uid://bwkjw7j27204y" path="res://kills_label.gd" id="1_64ctp"]
+[ext_resource type="Script" uid="uid://cpjiklu7oyq63" path="res://label.gd" id="4_640wx"]
+
+[sub_resource type="Gradient" id="Gradient_8sq4i"]
+offsets = PackedFloat32Array(0.491228, 0.552632, 0.622807)
+colors = PackedColorArray(0.927911, 0, 0.0597912, 1, 0.166853, 0.166853, 0.166853, 1, 0.282407, 0.282407, 0.282407, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_640wx"]
+gradient = SubResource("Gradient_8sq4i")
+width = 70
+height = 70
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_8sq4i")
+
+[node name="BulletDamageButton" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 17.0
+offset_top = 41.0
+offset_right = 177.0
+offset_bottom = 72.0
+text = "bullet damage (10      )"
+
+[node name="ShopTitle" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 10.0
+offset_right = 142.0
+offset_bottom = 33.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "pebblevs shop :)"
+
+[node name="MovementSpeedButton" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 17.0
+offset_top = 113.0
+offset_right = 217.0
+offset_bottom = 144.0
+text = "movement speed (20      )"
+
+[node name="ShootingSpeedButton" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 17.0
+offset_top = 77.0
+offset_right = 205.0
+offset_bottom = 108.0
+text = "shooting speed (10       )"
+
+[node name="EnemySpawnRateButton" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 17.0
+offset_top = 149.0
+offset_right = 142.0
+offset_bottom = 180.0
+text = "difficulty (5      )"
+
+[node name="KillsLabel" type="Label" parent="."]
+offset_left = 1071.0
+offset_top = 9.8
+offset_right = 1111.0
+offset_bottom = 32.8
+text = "0"
+horizontal_alignment = 2
+script = ExtResource("1_64ctp")
+
+[node name="Coin" type="CanvasLayer" parent="."]
+
+[node name="CoinSprite" type="Sprite2D" parent="Coin"]
+position = Vector2(1126, 23)
+scale = Vector2(0.540625, 0.54375)
+texture = SubResource("GradientTexture2D_640wx")
+
+[node name="Label2" type="Label" parent="Coin"]
+offset_left = 1122.0
+offset_top = 14.0
+offset_right = 1153.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "$"
+
+[node name="Coin2" type="CanvasLayer" parent="."]
+
+[node name="CoinSprite" type="Sprite2D" parent="Coin2"]
+position = Vector2(173, 58)
+scale = Vector2(0.540625, 0.54375)
+texture = SubResource("GradientTexture2D_640wx")
+
+[node name="Label2" type="Label" parent="Coin2"]
+offset_left = 169.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "$"
+
+[node name="Coin3" type="CanvasLayer" parent="."]
+
+[node name="CoinSprite" type="Sprite2D" parent="Coin3"]
+position = Vector2(182, 94)
+scale = Vector2(0.540625, 0.54375)
+texture = SubResource("GradientTexture2D_640wx")
+
+[node name="Label2" type="Label" parent="Coin3"]
+offset_left = 178.0
+offset_top = 85.0
+offset_right = 209.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "$"
+
+[node name="Coin4" type="CanvasLayer" parent="."]
+
+[node name="CoinSprite" type="Sprite2D" parent="Coin4"]
+position = Vector2(195, 130)
+scale = Vector2(0.540625, 0.54375)
+texture = SubResource("GradientTexture2D_640wx")
+
+[node name="Label2" type="Label" parent="Coin4"]
+offset_left = 192.0
+offset_top = 121.0
+offset_right = 223.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "$"
+
+[node name="Coin5" type="CanvasLayer" parent="."]
+
+[node name="CoinSprite" type="Sprite2D" parent="Coin5"]
+position = Vector2(120, 165)
+scale = Vector2(0.540625, 0.54375)
+texture = SubResource("GradientTexture2D_640wx")
+
+[node name="Label2" type="Label" parent="Coin5"]
+offset_left = 116.0
+offset_top = 157.0
+offset_right = 147.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "$"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 506.0
+offset_right = 188.0
+offset_bottom = 633.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "kills: 0
+bullet damage: 1
+shooting speed: 0.8
+movement speed: 200
+difficulty: 0.33"
+script = ExtResource("4_640wx")
+
+[connection signal="pressed" from="BulletDamageButton" to="." method="_on_bullet_damage_button_pressed"]
+[connection signal="pressed" from="MovementSpeedButton" to="." method="_on_movement_speed_button_pressed"]
+[connection signal="pressed" from="ShootingSpeedButton" to="." method="_on_shooting_speed_button_pressed"]
+[connection signal="pressed" from="ShootingSpeedButton" to="." method="_on_shooting_speed_button_2_pressed"]
+[connection signal="pressed" from="EnemySpawnRateButton" to="." method="_on_enemy_spawn_rate_button_pressed"]
