@@ -149,13 +149,16 @@ theme_override_font_sizes/font_size = 12
 text = "$"
 
 [node name="Label" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
 offset_left = 17.0
-offset_top = 506.0
+offset_top = -119.0
 offset_right = 188.0
-offset_bottom = 633.0
+offset_bottom = -18.0
+grow_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "kills: 0
-bullet damage: 1
+text = "bullet damage: 1
 shooting speed: 0.8
 movement speed: 200
 difficulty: 0.33"
@@ -163,6 +166,6 @@ script = ExtResource("4_640wx")
 
 [connection signal="pressed" from="BulletDamageButton" to="." method="_on_bullet_damage_button_pressed"]
 [connection signal="pressed" from="MovementSpeedButton" to="." method="_on_movement_speed_button_pressed"]
-[connection signal="pressed" from="ShootingSpeedButton" to="." method="_on_shooting_speed_button_pressed"]
 [connection signal="pressed" from="ShootingSpeedButton" to="." method="_on_shooting_speed_button_2_pressed"]
+[connection signal="pressed" from="ShootingSpeedButton" to="." method="_on_shooting_speed_button_pressed"]
 [connection signal="pressed" from="EnemySpawnRateButton" to="." method="_on_enemy_spawn_rate_button_pressed"]

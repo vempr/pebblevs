@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PlayerVariables="*res://player_variables.gd"
 TimeVariables="*res://time_variables.gd"
+ShopVariables="*res://shop_variables.gd"
 
 [display]
 

@@ -30,6 +30,7 @@ fill_to = Vector2(1, 0.5)
 radius = 36.0139
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7k104"]
+resource_local_to_scene = true
 bg_color = Color(0, 0, 0, 0.396078)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
@@ -37,7 +38,7 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gyqm"]
-bg_color = Color(0.789201, 0, 0.043511, 1)
+bg_color = Color(0.788235, 0, 0.211765, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -62,10 +63,10 @@ debug_color = Color(0.925082, 4.23551e-05, 0.67759, 0.42)
 
 [node name="EnemyHealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = -30.0
-offset_top = -57.0
-offset_right = 30.0
-offset_bottom = -45.0
+offset_left = -32.0
+offset_top = -59.0
+offset_right = 32.0
+offset_bottom = -43.0
 theme_override_styles/background = SubResource("StyleBoxFlat_7k104")
 theme_override_styles/fill = SubResource("StyleBoxFlat_4gyqm")
 max_value = 5.0

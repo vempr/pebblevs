@@ -1,7 +1,7 @@
 extends Node
 
 var STARTING_STATS = {
-	total_kills = 297,
+	total_kills = 0,
 	kills = 300,
 	movement_speed = 200,
 	shooting_speed = 1.0,

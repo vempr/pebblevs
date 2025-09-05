@@ -78,27 +78,28 @@ texture = ExtResource("1_80nbo")
 [node name="WorldBorder" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="WorldBorder"]
+visible = false
 collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldBorder/StaticBody2D"]
-position = Vector2(-1962, 43)
+position = Vector2(-1954, 41)
 shape = SubResource("RectangleShape2D_7jktm")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldBorder/StaticBody2D"]
-position = Vector2(1960, 79)
+position = Vector2(1969, 75)
 shape = SubResource("RectangleShape2D_7jktm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder/StaticBody2D"]
-position = Vector2(0, -1139)
+position = Vector2(0, -1131)
 shape = SubResource("RectangleShape2D_ryrav")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldBorder/StaticBody2D"]
-position = Vector2(0, 1245)
+position = Vector2(0, 1242)
 shape = SubResource("RectangleShape2D_ryrav")
 
 [node name="Line2D" type="Line2D" parent="WorldBorder"]
-points = PackedVector2Array(-1898, -1070, -6, -1073, 1915, -1071, 1913, 1177, -1898, 1181, -1898, -1070)
+points = PackedVector2Array(-1898, -1071, 1915, -1071, 1913, 1177, -1898, 1177, -1898, -1070)
 width = 5.0
 default_color = Color(0.329106, 0.527741, 0.873161, 1)
 
